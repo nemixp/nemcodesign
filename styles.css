@@ -17,6 +17,115 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+@media (max-width: 768px) { /* Styles for tablets and phones */
+    /* Mobile View */
+    /* Talk to Us Button */
+    #talk-to-us-button a {
+        font-size: 1rem; /* Font size optimized for mobile */
+        writing-mode: vertical-rl; /* Vertical text layout */
+        transform: rotate(180deg); /* Rotate text to read top to bottom */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Display on mobile devices */
+    }
+
+    /* Hide navigation and social links on mobile view */
+    .nav-links,
+    .social-links {
+        display: none; /* Hidden in mobile view */
+    }
+
+    /* Show the mobile menu when hamburger is clicked */
+    .mobile-menu.active {
+        display: flex; /* Display active mobile menu */
+        opacity: 1; /* Fade in when active */
+    }
+
+/* Style for navigation links inside the mobile menu */
+.mobile-menu .nav-links {
+    margin-left: 10px;
+    padding: 0; /* No padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack links vertically */
+    align-items: right; /* Center align links */
+    width: 100%; /* Full width of the mobile menu */
+}
+
+/* Style for individual navigation links */
+.mobile-menu .nav-links a {
+    display: flex; /* Each link is a block element */
+    color: #fff; /* Link color */
+    font-size: 1.5rem; /* Font size */
+    text-decoration: none; /* No underline */
+    text-align: center; /* Center align text */
+    width: 100%; /* Links take full width for better click area */
+    padding: 10px 0; /* Add vertical padding for comfort */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+    /* Style for social icons inside the mobile menu */
+    .mobile-menu .social-links {
+        display: flex; /* Display icons in a row */
+        gap: 30px; /* Space between icons */
+        margin-top: 10px; /* Space above social icons */
+        margin-left: 10px;
+    }
+
+    .mobile-menu .social-icon {
+        width: 36px; /* Icon width */
+        height: 36px; /* Icon height */
+        object-fit: contain; /* Maintain aspect ratio */
+        margin-left: 10px;
+    }
+
+    .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+
+    "large-item-1 large-item-1"
+    "large-item-1 large-item-1"
+    "small-item-1 small-item-2"
+    "small-item-3 small-item-4"
+    "large-item-2 large-item-2"
+    "large-item-2 large-item-2"
+    "small-item-5 small-item-6"
+    "small-item-7 small-item-8"
+    "large-item-3 large-item-3"
+    "large-item-3 large-item-3"
+    "small-item-9 small-item-10"
+    "small-item-11 small-item-12"
+
+  }
+}
+
+
+
+  @media (max-width: 480px) {/* Styles for phones */
+    .portfolio-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+
+    "large-item-1"
+    "small-item-1"
+    "small-item-2"
+    "small-item-3"
+    "small-item-4"
+    "large-item-2"
+    "small-item-5"
+    "small-item-6"
+    "small-item-7"
+    "small-item-8"
+    "large-item-3"
+    "small-item-9"
+    "small-item-10"
+    "small-item-11"
+    "small-item-12"
+  }
+}
+
+
 /* Video Background */
 .video-background {
     position: relative; /* Move with the page scroll */
@@ -355,114 +464,6 @@ h2 {
     gap: 5px; /* No gap between items */
     width: 90vw; /* Full viewport width */
     margin: 0 auto; 
-}
-
-@media (max-width: 768px) { /* Styles for tablets and phones */
-    /* Mobile View */
-    /* Talk to Us Button */
-    #talk-to-us-button a {
-        font-size: 1rem; /* Font size optimized for mobile */
-        writing-mode: vertical-rl; /* Vertical text layout */
-        transform: rotate(180deg); /* Rotate text to read top to bottom */
-    }
-
-    .hamburger-menu {
-        display: flex; /* Display on mobile devices */
-    }
-
-    /* Hide navigation and social links on mobile view */
-    .nav-links,
-    .social-links {
-        display: none; /* Hidden in mobile view */
-    }
-
-    /* Show the mobile menu when hamburger is clicked */
-    .mobile-menu.active {
-        display: flex; /* Display active mobile menu */
-        opacity: 1; /* Fade in when active */
-    }
-
-/* Style for navigation links inside the mobile menu */
-.mobile-menu .nav-links {
-    margin-left: 10px;
-    padding: 0; /* No padding */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack links vertically */
-    align-items: right; /* Center align links */
-    width: 100%; /* Full width of the mobile menu */
-}
-
-/* Style for individual navigation links */
-.mobile-menu .nav-links a {
-    display: flex; /* Each link is a block element */
-    color: #fff; /* Link color */
-    font-size: 1.5rem; /* Font size */
-    text-decoration: none; /* No underline */
-    text-align: center; /* Center align text */
-    width: 100%; /* Links take full width for better click area */
-    padding: 10px 0; /* Add vertical padding for comfort */
-    transition: background-color 0.3s; /* Smooth background change */
-}
-
-    /* Style for social icons inside the mobile menu */
-    .mobile-menu .social-links {
-        display: flex; /* Display icons in a row */
-        gap: 30px; /* Space between icons */
-        margin-top: 10px; /* Space above social icons */
-        margin-left: 10px;
-    }
-
-    .mobile-menu .social-icon {
-        width: 36px; /* Icon width */
-        height: 36px; /* Icon height */
-        object-fit: contain; /* Maintain aspect ratio */
-        margin-left: 10px;
-    }
-
-    .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-template-areas:
-
-    "large-item-1 large-item-1"
-    "large-item-1 large-item-1"
-    "small-item-1 small-item-2"
-    "small-item-3 small-item-4"
-    "large-item-2 large-item-2"
-    "large-item-2 large-item-2"
-    "small-item-5 small-item-6"
-    "small-item-7 small-item-8"
-    "large-item-3 large-item-3"
-    "large-item-3 large-item-3"
-    "small-item-9 small-item-10"
-    "small-item-11 small-item-12"
-
-  }
-}
-
-
-
-  @media (max-width: 480px) {/* Styles for phones */
-    .portfolio-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas:
-
-    "large-item-1"
-    "small-item-1"
-    "small-item-2"
-    "small-item-3"
-    "small-item-4"
-    "large-item-2"
-    "small-item-5"
-    "small-item-6"
-    "small-item-7"
-    "small-item-8"
-    "large-item-3"
-    "small-item-9"
-    "small-item-10"
-    "small-item-11"
-    "small-item-12"
-  }
 }
 
 
