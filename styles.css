@@ -358,11 +358,23 @@ h2 {
 
 @media (max-width: 768px) { /* Styles for tablets and phones */
     /* Mobile View */
+    /* Talk to Us Button */
     #talk-to-us-button {
-        font-size: 1.5rem;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 150px;
+        background-color: #007BFF;
+        color: #FFF;
+        border: none;
+        border-radius: 3%;
+        cursor: pointer;
+        font-size: 1.5rem; /* Font size optimized for mobile */
+        writing-mode: vertical-rl; /* Vertical text layout */
+        transform: rotate(180deg); /* Rotate text to read top to bottom */
     }
+}
     .hamburger-menu {
         display: flex; /* Display on mobile devices */
     }
