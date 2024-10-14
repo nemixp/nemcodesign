@@ -232,6 +232,21 @@ nav {
         opacity: 1; /* Fade in when active */
     }
 
+    #talk-to-us-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 150px;
+        background-color: #007BFF;
+        color: #FFF;
+        border: none;
+        border-radius: 3%;
+        font-size: 1.5rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
 /* Style for navigation links inside the mobile menu */
 .mobile-menu .nav-links {
     margin: 0; /* No margin */
@@ -288,8 +303,9 @@ nav {
     border-radius: 3%;
     cursor: pointer;
     font-size: 1.5rem;
+    writing-mode: vertical-rl;
     text-orientation: mixed;
-   
+    transform: rotate(180deg);
 }
 
 
