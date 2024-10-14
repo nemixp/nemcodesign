@@ -188,6 +188,7 @@ nav {
     z-index: 1000; /* Ensures it stays on top of other elements */
 }
 
+/* Talk to Us Button */
 #talk-to-us-button {
     display: flex;
     justify-content: center;
@@ -199,10 +200,10 @@ nav {
     border: none;
     border-radius: 3%;
     cursor: pointer;
-    font-size: 1.5rem;
-    writing-mode: vertical-rl;
+    font-size: 1.5rem; /* Font size optimized for mobile */
+    writing-mode: vertical-rl; /* Vertical text layout */
+    transform: rotate(180deg); /* Rotate text to read top to bottom */
 }
-
 
 #talk-to-us-button:hover {
     background-color: #0056b3;
