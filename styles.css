@@ -359,7 +359,9 @@ h2 {
 @media (max-width: 768px) { /* Styles for tablets and phones */
     /* Mobile View */
     #talk-to-us-button {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
     }
     .hamburger-menu {
         display: flex; /* Display on mobile devices */
