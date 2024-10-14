@@ -365,7 +365,7 @@ h2 {
         writing-mode: vertical-rl; /* Vertical text layout */
         transform: rotate(180deg); /* Rotate text to read top to bottom */
     }
-}
+
     .hamburger-menu {
         display: flex; /* Display on mobile devices */
     }
@@ -418,7 +418,7 @@ h2 {
         object-fit: contain; /* Maintain aspect ratio */
         margin-left: 10px;
     }
-}
+
     .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -438,6 +438,8 @@ h2 {
     "small-item-11 small-item-12"
 
   }
+}
+
 
 
   @media (max-width: 480px) {/* Styles for phones */
