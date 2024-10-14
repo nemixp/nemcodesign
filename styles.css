@@ -22,7 +22,7 @@ body {
     /* Talk to Us Button */
     #talk-to-us-button a {
         font-size: 1rem; /* Font size optimized for mobile */
-        writing-mode: vertical-rl; /* Vertical text layout */
+        writing-mode: horizontal-tb; /* Vertical text layout */
         transform: rotate(180deg); /* Rotate text to read top to bottom */
     }
 
