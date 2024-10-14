@@ -360,10 +360,10 @@ h2 {
 @media (max-width: 768px) { /* Styles for tablets and phones */
     /* Mobile View */
     /* Talk to Us Button */
-    #talk-to-us-button {
+    #talk-to-us-button a {
         font-size: 1.5rem; /* Font size optimized for mobile */
         writing-mode: vertical-rl; /* Vertical text layout, reads top to bottom */
-        transform: rotate(90deg); /* Remove rotation */
+        transform: rotate(-90deg); /* Remove rotation */
     }
 
     .hamburger-menu {
