@@ -52,40 +52,6 @@ body {
     object-fit: cover;
 }
 
-.photo-background2 {
-    position: relative; /* Allows positioning of child elements */
-    width: 100vw;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    z-index: -1; /* Ensure it stays behind other content */
-}
-
-.photo-background2 img {
-    position: absolute;
-    top: 1;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.photo-background3 {
-    position: fixed; /* Allows positioning of child elements */
-    width: 100vw;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
-    z-index: -1; /* Ensure it stays behind other content */
-}
-
-.photo-background3 img {
-    position: fixed;
-    top: 1;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .logo a {
     color: #ffffff; /* Default color */
     text-decoration: none; /* Remove underline */
@@ -194,9 +160,9 @@ nav {
     top: 70px; /* Position below the navbar */
     right: 0; /* Align to the right */
     background-color: rgba(0, 0, 0, 0.9); /* Background color */
-    padding: 20px; /* Padding around the menu */
+    padding: 40px; /* Padding around the menu */
     border-radius: 10px; /* Rounded corners */
-    width: 40vw; /* Width of the menu */
+    width: 50vw; /* Width of the menu */
 }
 
 /* Hamburger Menu Styling */
@@ -213,60 +179,6 @@ nav {
     background-color: white; /* Hamburger lines color */
 }
 
-/* Mobile View */
-@media (max-width: 768px) {
-    /* Show the hamburger menu */
-    .hamburger-menu {
-        display: flex; /* Display on mobile devices */
-    }
-
-    /* Hide navigation and social links on mobile view */
-    .nav-links,
-    .social-links {
-        display: none; /* Hidden in mobile view */
-    }
-
-    /* Show the mobile menu when hamburger is clicked */
-    .mobile-menu.active {
-        display: flex; /* Display active mobile menu */
-        opacity: 1; /* Fade in when active */
-    }
-
-/* Style for navigation links inside the mobile menu */
-.mobile-menu .nav-links {
-    margin: 0; /* No margin */
-    padding: 0; /* No padding */
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack links vertically */
-    align-items: right; /* Center align links */
-    width: 100%; /* Full width of the mobile menu */
-}
-
-/* Style for individual navigation links */
-.mobile-menu .nav-links a {
-    display: block; /* Each link is a block element */
-    color: #fff; /* Link color */
-    font-size: 1.5rem; /* Font size */
-    text-decoration: none; /* No underline */
-    text-align: center; /* Center align text */
-    width: 100%; /* Links take full width for better click area */
-    padding: 10px 0; /* Add vertical padding for comfort */
-    transition: background-color 0.3s; /* Smooth background change */
-}
-
-    /* Style for social icons inside the mobile menu */
-    .mobile-menu .social-links {
-        display: flex; /* Display icons in a row */
-        gap: 30px; /* Space between icons */
-        margin-top: 10px; /* Space above social icons */
-    }
-
-    .mobile-menu .social-icon {
-        width: 36px; /* Icon width */
-        height: 36px; /* Icon height */
-        object-fit: contain; /* Maintain aspect ratio */
-    }
-}
 
 #talk-to-us-container {
     position: fixed;
@@ -289,7 +201,6 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
     writing-mode: vertical-rl;
-    text-orientation: mixed;
     transform: rotate(180deg);
 }
 
@@ -447,6 +358,75 @@ h2 {
 }
 
 @media (max-width: 768px) { /* Styles for tablets and phones */
+    /* Mobile View */
+    .hamburger-menu {
+        display: flex; /* Display on mobile devices */
+    }
+
+    /* Hide navigation and social links on mobile view */
+    .nav-links,
+    .social-links {
+        display: none; /* Hidden in mobile view */
+    }
+
+    /* Show the mobile menu when hamburger is clicked */
+    .mobile-menu.active {
+        display: flex; /* Display active mobile menu */
+        opacity: 1; /* Fade in when active */
+    }
+
+    #talk-to-us-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 150px;
+        background-color: #007BFF;
+        color: #FFF;
+        border: none;
+        border-radius: 3%;
+        font-size: 1.5rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+/* Style for navigation links inside the mobile menu */
+.mobile-menu .nav-links {
+    margin-left: 10px;
+    padding: 0; /* No padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack links vertically */
+    align-items: right; /* Center align links */
+    width: 100%; /* Full width of the mobile menu */
+}
+
+/* Style for individual navigation links */
+.mobile-menu .nav-links a {
+    display: flex; /* Each link is a block element */
+    color: #fff; /* Link color */
+    font-size: 1.5rem; /* Font size */
+    text-decoration: none; /* No underline */
+    text-align: center; /* Center align text */
+    width: 100%; /* Links take full width for better click area */
+    padding: 10px 0; /* Add vertical padding for comfort */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+    /* Style for social icons inside the mobile menu */
+    .mobile-menu .social-links {
+        display: flex; /* Display icons in a row */
+        gap: 30px; /* Space between icons */
+        margin-top: 10px; /* Space above social icons */
+        margin-left: 10px;
+    }
+
+    .mobile-menu .social-icon {
+        width: 36px; /* Icon width */
+        height: 36px; /* Icon height */
+        object-fit: contain; /* Maintain aspect ratio */
+        margin-left: 10px;
+    }
+}
     .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -466,7 +446,7 @@ h2 {
     "small-item-11 small-item-12"
 
   }
-}
+
 
   @media (max-width: 480px) {/* Styles for phones */
     .portfolio-grid {
