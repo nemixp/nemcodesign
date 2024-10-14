@@ -1,0 +1,796 @@
+@font-face {
+    font-family: poppins-regular;
+    src: url(fonts/Poppins-Light.ttf);
+}
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins-regular;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fafafa; /* White background for the entire page */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Video Background */
+.video-background {
+    position: relative; /* Move with the page scroll */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-background {
+    position: relative; /* Allows positioning of child elements */
+    width: 100vw;
+    height: 150vh; /* Full viewport height */
+    overflow: scroll;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.photo-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 150vh;
+    object-fit: cover;
+}
+
+.photo-background2 {
+    position: relative; /* Allows positioning of child elements */
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.photo-background2 img {
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.photo-background3 {
+    position: fixed; /* Allows positioning of child elements */
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+.photo-background3 img {
+    position: fixed;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo a {
+    color: #ffffff; /* Default color */
+    text-decoration: none; /* Remove underline */
+    font-family: poppins-regular;
+    font-size: 1.5rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+  
+}
+
+/* Optional: Change color on hover */
+.logo a:hover {
+    color: #555; /* Change to a different color on hover, if desired */
+/* Header Section */
+}
+
+header {
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent */
+    color: #fff;
+    height: 60px;
+    z-index: 1; /* Ensure it stays above the video background */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex; /* Display the navigation items horizontally by default */
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    left: -30px; /* Adjust this value between -5px and -10px to move it left */
+    color: #ffffff; /* Set your desired color */
+    text-decoration: none; /* No underline initially */
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff; /* Set your underline color */
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Keeps the underline same length on hover */
+}
+
+/* Social Links Section */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    object-fit: contain;
+}
+
+/* Basic nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;  /* Ensure logo text is visible */
+}
+
+.mobile-menu {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align items */
+    position: absolute;
+    top: 70px; /* Position below the navbar */
+    right: 0; /* Align to the right */
+    background-color: rgba(0, 0, 0, 0.9); /* Background color */
+    padding: 20px; /* Padding around the menu */
+    border-radius: 10px; /* Rounded corners */
+    width: 40vw; /* Width of the menu */
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px; /* Spacing between lines */
+}
+
+.hamburger-menu .line {
+    width: 30px;
+    height: 3px;
+    background-color: white; /* Hamburger lines color */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Show the hamburger menu */
+    .hamburger-menu {
+        display: flex; /* Display on mobile devices */
+    }
+
+    /* Hide navigation and social links on mobile view */
+    .nav-links,
+    .social-links {
+        display: none; /* Hidden in mobile view */
+    }
+
+    /* Show the mobile menu when hamburger is clicked */
+    .mobile-menu.active {
+        display: flex; /* Display active mobile menu */
+        opacity: 1; /* Fade in when active */
+    }
+
+/* Style for navigation links inside the mobile menu */
+.mobile-menu .nav-links {
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack links vertically */
+    align-items: right; /* Center align links */
+    width: 100%; /* Full width of the mobile menu */
+}
+
+/* Style for individual navigation links */
+.mobile-menu .nav-links a {
+    display: block; /* Each link is a block element */
+    color: #fff; /* Link color */
+    font-size: 1.5rem; /* Font size */
+    text-decoration: none; /* No underline */
+    text-align: center; /* Center align text */
+    width: 100%; /* Links take full width for better click area */
+    padding: 10px 0; /* Add vertical padding for comfort */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+    /* Style for social icons inside the mobile menu */
+    .mobile-menu .social-links {
+        display: flex; /* Display icons in a row */
+        gap: 30px; /* Space between icons */
+        margin-top: 10px; /* Space above social icons */
+    }
+
+    .mobile-menu .social-icon {
+        width: 36px; /* Icon width */
+        height: 36px; /* Icon height */
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+}
+
+#talk-to-us-container {
+    position: fixed;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+#talk-to-us-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 150px;
+    background-color: #007BFF;
+    color: #FFF;
+    border: none;
+    border-radius: 3%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+
+#talk-to-us-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem; /* Default font size for the hero section */
+}
+
+.hero-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    color: #fefefe;
+}
+
+.hero-2-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-2 .group-1,
+.hero-2 .group-2 
+.hero-2 .group-3 
+.hero-2 .group-4 
+.hero-2 .group-5 
+.hero-2 .group-6 {
+    margin-bottom: 30px;
+}
+
+.hero-2 h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Example of different font color */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+}
+
+.hero-2 p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    
+}
+.hero-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    color: #fefefe;
+}
+
+.hero-about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-2 .group-1,
+.hero-2 .group-2 
+.hero-2 .group-3 
+.hero-2 .group-4 
+.hero-2 .group-5 
+.hero-2 .group-6 {
+    margin-bottom: 30px;
+}
+
+.hero-about h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Example of different font color */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+}
+
+.hero-about p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    
+}
+
+/* Main Content Sections */
+main {
+    padding: 20px;
+}
+
+/* About and Portfolio Sections */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text alignment */
+    padding: 50px 20px;
+    max-width: 1200px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the section within its container */
+}
+
+#about {
+    margin-top: 0; /* Start directly after the Hero section */
+}
+
+#portfolio {
+    margin-top: 50px; /* Space between About and Portfolio sections */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+/* Portfolio Section Styling */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-template-rows: repeat(6, 1fr); /* Six equal rows (added two rows) */
+    grid-template-areas:
+        "large-item-1 large-item-1 small-item-1 small-item-2"
+        "large-item-1 large-item-1 small-item-3 small-item-4"
+        "small-item-5 small-item-6 large-item-2 large-item-2"
+        "small-item-7 small-item-8 large-item-2 large-item-2"
+        "large-item-3 large-item-3 small-item-9 small-item-10"
+        "large-item-3 large-item-3 small-item-11 small-item-12";
+    gap: 5px; /* No gap between items */
+    width: 90vw; /* Full viewport width */
+    margin: 0 auto; 
+}
+
+@media (max-width: 768px) { /* Styles for tablets and phones */
+    .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+
+    "large-item-1 large-item-1"
+    "large-item-1 large-item-1"
+    "small-item-1 small-item-2"
+    "small-item-3 small-item-4"
+    "large-item-2 large-item-2"
+    "large-item-2 large-item-2"
+    "small-item-5 small-item-6"
+    "small-item-7 small-item-8"
+    "large-item-3 large-item-3"
+    "large-item-3 large-item-3"
+    "small-item-9 small-item-10"
+    "small-item-11 small-item-12"
+
+  }
+}
+
+  @media (max-width: 480px) {/* Styles for phones */
+    .portfolio-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+
+    "large-item-1"
+    "small-item-1"
+    "small-item-2"
+    "small-item-3"
+    "small-item-4"
+    "large-item-2"
+    "small-item-5"
+    "small-item-6"
+    "small-item-7"
+    "small-item-8"
+    "large-item-3"
+    "small-item-9"
+    "small-item-10"
+    "small-item-11"
+    "small-item-12"
+  }
+}
+
+
+.large-item-1 {
+    grid-area: large-item-1;
+}
+
+.large-item-2 {
+    grid-area: large-item-2;
+}
+
+.large-item-3 {
+    grid-area: large-item-3;
+}
+
+.small-item-1 {
+    grid-area: small-item-1;
+}
+
+.small-item-2 {
+    grid-area: small-item-2;
+}
+
+.small-item-3 {
+    grid-area: small-item-3;
+}
+
+.small-item-4 {
+    grid-area: small-item-4;
+}
+
+.small-item-5 {
+    grid-area: small-item-5;
+}
+
+.small-item-6 {
+    grid-area: small-item-6;
+}
+
+.small-item-7 {
+    grid-area: small-item-7;
+}
+
+.small-item-8 {
+    grid-area: small-item-8;
+}
+
+.small-item-9 {
+    grid-area: small-item-9;
+}
+
+.small-item-10 {
+    grid-area: small-item-10;
+}
+
+.small-item-11 {
+    grid-area: small-item-11;
+}
+
+.small-item-12 {
+    grid-area: small-item-12;
+}
+
+/* Common styling for items */
+.large-item-1,
+.large-item-2,
+.large-item-3,
+.small-item-1,
+.small-item-2,
+.small-item-3,
+.small-item-4,
+.small-item-5,
+.small-item-6,
+.small-item-7,
+.small-item-8,
+.small-item-9,
+.small-item-10,
+.small-item-11,
+.small-item-12 {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio of 1:1 (square) */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling for all portfolio items */
+.large-item-1 img,
+.large-item-2 img,
+.large-item-3 img,
+.small-item-1 img,
+.small-item-2 img,
+.small-item-3 img,
+.small-item-4 img,
+.small-item-5 img,
+.small-item-6 img,
+.small-item-7 img,
+.small-item-8 img,
+.small-item-9 img,
+.small-item-10 img,
+.small-item-11 img,
+.small-item-12 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+}
+
+/* Zoom effect on hover */
+.large-item-1:hover img,
+.large-item-2:hover img,
+.large-item-3:hover img,
+.small-item-1:hover img,
+.small-item-2:hover img,
+.small-item-3:hover img,
+.small-item-4:hover img,
+.small-item-5:hover img,
+.small-item-6:hover img,
+.small-item-7:hover img,
+.small-item-8:hover img,
+.small-item-9:hover img,
+.small-item-10:hover img,
+.small-item-11:hover img,
+.small-item-12:hover img {
+    transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+/* Text overlay for each portfolio item */
+.large-item-1 p,
+.large-item-2 p,
+.large-item-3 p,
+.small-item-1 p,
+.small-item-2 p,
+.small-item-3 p,
+.small-item-4 p,
+.small-item-5 p,
+.small-item-6 p,
+.small-item-7 p,
+.small-item-8 p,
+.small-item-9 p,
+.small-item-10 p,
+.small-item-11 p,
+.small-item-12 p {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    color: #fff;
+    font-family: poppins-regular;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Contact Form Styling */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    max-width: 600px; /* Optional: limit form width */
+    width: 100%; /* Make sure it takes full width within its container */
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ensure inputs take full width */
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: rounded corners for button */
+    width: 100%; /* Ensure button takes full width */
+}
+
+/* Footer Section */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Image Sections */
+.image-sections2 {
+    position: center;
+
+    justify-content: center; /* Center horizontally */
+}
+
+.image-item2 {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    justify-content: center;
+}
+
+.image-item2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+    
+}
+
+.image-item2 img {
+    animation: fadeIn 1s ease-out forwards
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+/* Default link color */
+a {
+    color: rgb(255, 255, 255);
+}
+
+/* Hover state */
+a:hover {
+    color: rgb(158, 158, 158);
+}
+
+/* Visited link color */
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* Active link color */
+a:active {
+    color: rgb(255, 255, 255);
+}
+.portfolio-item {
+    text-align: center;
+    padding: 0;
+}
+
+/* Flexbox for images side by side */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between the images */
+}
+
+.image-row img {
+    width: 50%; /* Adjust as needed to fit them side by side */
+    height: auto;
+}
+
+.portfolio-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.prev-button, .next-button {
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #555;
+}

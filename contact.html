@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - nemCODEsign</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+   <!-- Photo Background -->
+<div class="photo-background">
+    <img src="images/Speaker-grill-(13).jpg" alt="Background Photo">
+</div>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">nemCODEsign.</a>
+            </div>
+            
+            <!-- Main Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    
+            <!-- Social Media Links (visible on desktop) -->
+            <div class="social-links" id="social-links">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="social-icon" src="images/Instagram-Logo.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img class="social-icon" src="images/Linkedin-logo.png" alt="LinkedIn">
+                </a>
+            </div>
+    
+            <!-- Hamburger Menu (only visible on mobile) -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact us</h1>
+            <p>Get in touch with us for inquiries or feedback </p>
+            <p><a href="mailto:nemanja@nemcodesign.com">nemanja@nemcodesign.com</a></p>
+        </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <main>
+        <!-- Contact Section -->
+    <section id="contact">
+    <h2>We'd Love to Hear from You</h2>
+    <form action="send_email.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 nemCODEsign. All rights reserved.</p>
+    </footer>
+</body>
+</html>
