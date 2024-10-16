@@ -365,9 +365,6 @@ h2 {
     }
     .talk-to-us-button {
         display: none;
-        font-size: 1.5rem; /* Font size optimized for mobile */
-        writing-mode: vertical-lr; /* Vertical text layout, reads top to bottom */
-        transform: rotate(180); /* Remove rotation */
     }
 
     .hamburger-menu {
