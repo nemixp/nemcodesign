@@ -361,7 +361,7 @@ h2 {
     /* Mobile View */
     .photo-background {
         background-position: center; /* Center the image */
-        background-size: cover; /* Scale image to cover the entire container */
+        background-size: contain; /* Scale image to cover the entire container */
         background-repeat: no-repeat; /* Prevent image repetition */
         width: 100vw;
         height: 100vh; /* Make sure the image covers the full height */
