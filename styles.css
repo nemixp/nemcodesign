@@ -367,6 +367,7 @@ h2 {
         font-size: 1.5rem; /* Font size optimized for mobile */
         writing-mode: vertical-lr; /* Vertical text layout, reads top to bottom */
         transform: rotate(180); /* Remove rotation */
+        -webkit-transform: rotate(0); /* Remove rotation on Huawei's WebKit-based browsers */
     }
 
     .hamburger-menu {
