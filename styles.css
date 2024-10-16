@@ -360,8 +360,9 @@ h2 {
 @media (max-width: 768px) { /* Styles for tablets and phones */
     /* Mobile View */
     .photo-background {
-        background-size: cover; /* Scale the background to cover the entire element */
         background-position: center; /* Center the image */
+        width: 100vw;
+        height: 150vh;
     }
     #talk-to-us-button {
         display: none;
