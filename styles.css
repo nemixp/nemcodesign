@@ -362,7 +362,6 @@ h2 {
     .photo-background {
         background-position: center; /* Center the image */
         width: 100vw;
-        height: 150vh;
     }
     #talk-to-us-button {
         display: none;
