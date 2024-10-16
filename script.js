@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Create the button element
     const talkToUsButton = document.createElement('button');
-
     if (navigator.userAgent.includes('Huawei') || navigator.userAgent.includes('HUAWEI')) {
         document.body.classList.add('huawei-device');
     }
+
     // Set the button's text content
     talkToUsButton.textContent = 'Talk to Us';
 
