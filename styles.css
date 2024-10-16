@@ -180,7 +180,7 @@ nav {
 }
 
 
-.talk-to-us-container {
+#talk-to-us-container {
     position: fixed;
     right: 3px;
     top: 50%;
@@ -189,7 +189,7 @@ nav {
 }
 
 /* Talk to Us Button */
-.talk-to-us-button {
+#talk-to-us-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,7 +363,7 @@ h2 {
         background-size: cover; /* Scale the background to cover the entire element */
         background-position: center; /* Center the image */
     }
-    .talk-to-us-button {
+    #talk-to-us-button {
         display: none;
     }
 
