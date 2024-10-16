@@ -180,7 +180,7 @@ nav {
 }
 
 
-#talk-to-us-container {
+.talk-to-us-container {
     position: fixed;
     right: 3px;
     top: 50%;
@@ -189,7 +189,7 @@ nav {
 }
 
 /* Talk to Us Button */
-#talk-to-us-button {
+.talk-to-us-button {
     display: flex;
     justify-content: center;
     align-items: center;
