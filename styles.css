@@ -361,10 +361,19 @@ h2 {
     /* Mobile View */
     .photo-background {
         background-position: center; /* Center the image */
-        background-size: contain; /* Scale image to cover the entire container */
+        background-size: cover; /* Scale image to cover the entire container */
         background-repeat: no-repeat; /* Prevent image repetition */
         width: 100vw; /* Full width */
         height: 100vh; /* Full height */
+    }
+
+    .photo-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 150vh;
+        object-fit: cover;
     }
 
     #talk-to-us-button {
