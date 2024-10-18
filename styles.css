@@ -360,6 +360,21 @@ h2 {
 @media (max-width: 768px) { /* Styles for tablets and phones */
     /* Mobile View */
 
+    .image-row {
+        flex-direction: column; /* Stack images vertically */
+    }
+
+    .image-container {
+        width: 100%; /* Full width on mobile */
+        padding-bottom: 100%; /* Maintain square shape */
+    }
+
+    .image-container img {
+        width: 100%; /* Full width of the container */
+        height: 100%; /* Full height of the container */
+        object-fit: cover; /* Ensure the image fills the container */
+    }
+
     h1 {
         font-size: 32px; /* Reduce the size of h1 */
       }
