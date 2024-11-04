@@ -73,7 +73,6 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent */
-    color: #fff;
     height: 60px;
     z-index: 1; /* Ensure it stays above the video background */
 }
@@ -98,7 +97,6 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
     text-decoration: none;
     position: relative;
     left: -30px; /* Adjust this value between -5px and -10px to move it left */
@@ -224,90 +222,6 @@ nav {
     font-size: 3rem; /* Default font size for the hero section */
 }
 
-.hero-2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    text-align: center;
-    color: #fefefe;
-}
-
-.hero-2-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-2 .group-1,
-.hero-2 .group-2 
-.hero-2 .group-3 
-.hero-2 .group-4 
-.hero-2 .group-5 
-.hero-2 .group-6 {
-    margin-bottom: 30px;
-}
-
-.hero-2 h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #ffffff; /* Example of different font color */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    text-align: center;
-}
-
-.hero-2 p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    max-width: 800px;
-    
-}
-.hero-about {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    text-align: center;
-    color: #fefefe;
-}
-
-.hero-about-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-2 .group-1,
-.hero-2 .group-2 
-.hero-2 .group-3 
-.hero-2 .group-4 
-.hero-2 .group-5 
-.hero-2 .group-6 {
-    margin-bottom: 30px;
-}
-
-.hero-about h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #ffffff; /* Example of different font color */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    text-align: center;
-}
-
-.hero-about p {
-    font-size: 1.2em;
-    line-height: 1.5;
-    max-width: 800px;
-    
-}
 
 /* Main Content Sections */
 main {
@@ -357,51 +271,24 @@ h2 {
     margin: 0 auto; 
 }
 
-@media (max-width: 768px) { /* Styles for tablets and phones */
-    /* Mobile View */
+/* Media query for mobile devices */
+@media (max-width: 768px) {
 
-    .image-row {
-        flex-direction: column; /* Stack images vertically */
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important; /* Force one column */
+        gap: 10px; /* Space between items */
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .image-container {
-        width: 100%; /* Full width on mobile */
-        padding-bottom: 100%; /* Maintain square shape */
+    .nero {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .image-container img {
-        width: 100%; /* Full width of the container */
-        height: 100%; /* Full height of the container */
-        object-fit: cover; /* Ensure the image fills the container */
-    }
-
-    h1 {
-        font-size: 32px; /* Reduce the size of h1 */
-      }
-    
-    h2 {
-        font-size: 16px; /* Reduce the size of h1 */
-      }
-
-      p {
-        font-size: 16px; /* Reduce the size of paragraphs */
-      }
-
-    .photo-background {
-        position: relative; /* Allows positioning of child elements */
-        width: 100vw;
-        height: 100vh; /* Full viewport height */
-        overflow: scroll;
-        z-index: -1; /* Ensure it stays behind other content */
-    }
-    
-    .photo-background img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
+    .nero-text {
+        text-align: center;
     }
 
     #talk-to-us-button {
@@ -485,6 +372,7 @@ h2 {
 
 
   @media (max-width: 480px) {/* Styles for phones */
+
     .portfolio-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas:
@@ -756,57 +644,109 @@ footer {
     max-width: 100%;
     height: auto;
   }
-/* Default link color */
-a {
-    color: rgb(255, 255, 255);
-}
 
-/* Hover state */
-a:hover {
-    color: rgb(158, 158, 158);
-}
-
-/* Visited link color */
-a:visited {
-    color: rgb(255, 255, 255);
-}
-
-/* Active link color */
-a:active {
-    color: rgb(255, 255, 255);
-}
 .portfolio-item {
     text-align: center;
     padding: 0;
 }
 
-/* Flexbox for images side by side */
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Adds space between the images */
+/* Project Description */
+.project-description {
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
-.image-row img {
-    width: 60%; /* Adjust as needed to fit them side by side */
-    height: auto;
+.project-description h2 {
+    margin-bottom: 20px;
 }
 
 .portfolio-navigation {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 40px;
 }
 
-.prev-button, .next-button {
-    padding: 20px 40px;
-    background-color: #333;
-    color: #fff;
+.prev-button , .next-button{
+    padding: 5px 20px; /* Fixed typo for padding */
+    background-color: transparent;
+    color: #000; /* Set the text color to black */
+    font-size: 2rem;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.prev-button:hover, .next-button:hover {
-    background-color: #555;
+.prev-button :hover, .next-button :hover {
+    text-decoration-color: #555;
+}
+
+/* Nero Section */
+.nero {
+    position: relative;
+    overflow: hidden;
+}
+
+.nero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.nero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+}
+
+.nero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.nero-text p {
+    font-size: 1.2em;
+}
+
+/* Project Description */
+.project-description {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.project-description h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    width: 90vw; /* 90% of viewport width */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.gallery-item {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio 1:1 */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling for all gallery items */
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure images fit */
 }
